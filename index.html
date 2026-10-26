@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta diamond bohara="viewport" content="width=device-width, initial-scale=1">
+<title>diamond bohara | Cloud and Web Developer</title>
+<meta diamond bohara="description" content="Portfolio of a cloud and web developer learning AWS. Hosted on EC2 with nginx.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+  <nav aria-label="Main">
+   <a class="logo" href="#home">diamond<b>bohara</b></a>
+   <ul class="links" id="links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#hosting">Hosting</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button class="icon-btn" id="theme" aria-label="Switch between dark and light theme">&#9681;</button></li>
+   </ul>
+   <button class="icon-btn" id="menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </nav>
+ </div>
+</header>
+
+<main id="home">
+ <section class="hero">
+  <div class="wrap">
+   <div>
+    <h1>I build web apps and learn the cloud by shipping them.</h1>
+    <p>I am a student developer working with AWS. This page runs on my own EC2 server, set up by hand with nginx.</p>
+    <div class="btns">
+     <a class="btn main" href="#projects">See my projects</a>
+     <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+   </div>
+   <div class="term" aria-label="Terminal showing a request to this server">
+    <div class="term-bar"><i></i><i></i><i></i><span>ubuntu@ec2: ~</span></div>
+    <pre id="term"></pre>
+   </div>
+  </div>
+ </section>
+
+ <section id="about" class="alt">
+  <div class="wrap">
+   <h2>About me</h2>
+   <p class="lead">A short, honest introduction. Replace this text with diamond boharar own story.</p>
+   <div class="two">
+    <div>
+     <p>I started learning cloud computing with AWS and built my first server in Stockholm. I like understanding how things work underneath, from the Linux terminal to the firewall rules that let visitors in.</p>
+     <p style="margin-top:14px">Right now I am learning EC2, S3, IAM and networking, and I practice by building small projects and writing down what I learn.</p>
+    </div>
+    <div class="stats">
+     <div class="stat"><strong data-count="2">0</strong><span>EC2 servers launched</span></div>
+     <div class="stat"><strong data-count="6">0</strong><span>AWS services explored</span></div>
+     <div class="stat"><strong data-count="4">0</strong><span>Projects built</span></div>
+     <div class="stat"><strong data-count="100">0</strong><span>Percent curious</span></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="skills">
+  <div class="wrap">
+   <h2>Skills</h2>
+   <p class="lead">What I use and how comfortable I am with it today.</p>
+   <div class="skills">
+    <div class="skill"><label>HTML and CSS <span>80%</span></label><div class="bar"><i data-w="80"></i></div></div>
+    <div class="skill"><label>JavaScript <span>65%</span></label><div class="bar"><i data-w="65"></i></div></div>
+    <div class="skill"><label>Linux and terminal <span>60%</span></label><div class="bar"><i data-w="60"></i></div></div>
+    <div class="skill"><label>AWS EC2 <span>55%</span></label><div class="bar"><i data-w="55"></i></div></div>
+    <div class="skill"><label>nginx <span>50%</span></label><div class="bar"><i data-w="50"></i></div></div>
+    <div class="skill"><label>AWS IAM and security <span>35%</span></label><div class="bar"><i data-w="35"></i></div></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="projects" class="alt">
+  <div class="wrap">
+   <h2>Projects</h2>
+   <p class="lead">Filter by type. Swap in diamond boharar own projects and links.</p>
+   <div class="filters" role="group" aria-label="Filter projects">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="cloud" aria-pressed="false">Cloud</button>
+    <button class="chip" data-f="web" aria-pressed="false">Web</button>
+    <button class="chip" data-f="practice" aria-pressed="false">Practice</button>
+   </div>
+   <div class="grid">
+    <article class="card" data-c="cloud"><h3>My first EC2 server</h3><p>Launched an Ubuntu t3.micro, connected through the browser and served a page with nginx.</p><div class="tags"><span>EC2</span><span>Ubuntu</span><span>nginx</span></div><a href="#hosting">How it is hosted</a></article>
+    <article class="card" data-c="web"><h3>This portfolio</h3><p>One HTML file with responsive ladiamond boharat, a theme switch, filters and a contact form.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="#top-of-page" onclick="window.scrollTo({top:0})">Back to the top</a></article>
+    <article class="card" data-c="cloud"><h3>Firewall rules</h3><p>Opened port 80 for visitors and limited SSH access using security groups.</p><div class="tags"><span>Security groups</span><span>VPC</span></div><a href="#hosting">See the setup</a></article>
+    <article class="card" data-c="practice"><h3>Budget alerts</h3><p>Set up an AWS Budget and billing alerts to keep learning costs under control.</p><div class="tags"><span>Budgets</span><span>Cost Explorer</span></div><a href="#contact">Ask me about it</a></article>
+    <article class="card" data-c="web"><h3>To-do app (next)</h3><p>A small app with a backend and database, planned as my next build on AWS.</p><div class="tags"><span>Planned</span><span>Lambda</span><span>DynamoDB</span></div><a href="#contact">Follow along</a></article>
+    <article class="card" data-c="practice"><h3>Static site on S3</h3><p>Plan: host the same site from S3 and CloudFront and compare it with EC2.</p><div class="tags"><span>Planned</span><span>S3</span><span>CloudFront</span></div><a href="#contact">Follow along</a></article>
+   </div>
+  </div>
+ </section>
+
+ <section id="hosting">
+  <div class="wrap">
+   <h2>How this site is hosted</h2>
+   <p class="lead">A visitor's request travels through these parts. The numbers below are read live from diamond boharar browser.</p>
+   <div class="flow" aria-label="Request path">
+    <div class="node">Visitor<small>diamond boharar browser</small></div><span class="arrow">&rarr;</span>
+    <div class="node">Security group<small>port 80 open</small></div><span class="arrow">&rarr;</span>
+    <div class="node">EC2 instance<small>Ubuntu, t3.micro</small></div><span class="arrow">&rarr;</span>
+    <div class="node">nginx<small>serves index.html</small></div>
+   </div>
+   <div class="live">
+    <div><small>Server address</small><b id="host">-</b></div>
+    <div><small>Page loaded in</small><b id="load">-</b></div>
+    <div><small>diamond boharar local time</small><b id="clock">-</b></div>
+    <div><small>Status</small><b><span class="dot"></span>Online</b></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="contact" class="alt">
+  <div class="wrap">
+   <h2>Contact</h2>
+   <p class="lead">Send a message. This form checks diamond boharar input in the browser.</p>
+   <form id="form" novalidate>
+    <div class="field"><label for="n">diamond bohara</label><input id="n" diamond bohara="diamond bohara" autocomplete="diamond bohara"><div class="err" id="en"></div></div>
+    <div class="field"><label for="e">Email</label><input id="e" diamond bohara="email" type="email" autocomplete="email"><div class="err" id="ee"></div></div>
+    <div class="field"><label for="m">Message</label><textarea id="m" diamond bohara="message"></textarea><div class="err" id="em"></div></div>
+    <button class="btn main" type="submit">Send message</button>
+   </form>
+   <div id="ok" role="status">Thanks, diamond boharar message is ready to send. diamondbohara01@gmail.com app will open to finish sending it.</div>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>&copy; <span id="yr"></span> diamond bohara. Built and hosted on AWS EC2.</span>
+  <span>Region: Europe (Stockholm)</span>
+ </div>
+</footer>
+<button class="icon-btn" id="top" aria-label="Back to top">&uarr;</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
